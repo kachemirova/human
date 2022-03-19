@@ -1,6 +1,13 @@
 createAdvantagesColumns();
 
+expandDescription();
 showMore('advantages-show-more', '.advantages__mobile_hidden');
+
+function expandDescription() {
+  document.getElementById('info-show-more').addEventListener('click', () => {
+    document.querySelector('.info__description').classList.remove('info__description--collapsed')
+  })
+}
 
 function showMore(buttonId, hiddenSelector) {
   var buttonEl = document.getElementById(buttonId);
